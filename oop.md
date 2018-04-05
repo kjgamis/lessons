@@ -87,3 +87,12 @@ person.name # => "Dennis"
 The equal sign after the writer method name is special Ruby syntax that indicates that the value can be assigned using the equal sign, rather than the typical syntax of calling a method by passing the argument in between round brackets.
 
 Awesome! Now we can read and write the instance variable @name using our reader and writer methods.
+
+Shorthand: 
+```
+attr_reader :name
+attr_writer :name
+
+attr_accessor :name
+```
+
