@@ -195,3 +195,10 @@ If you want to completely remove a database table, you'll need to "drop" it.
 ```
 DROP TABLE _table_;
 ```
+
+### SQL Commands
+
+- ```SELECT```
+- ```WHERE```
+- ```COUNT```
+- ```ORDER BY```
