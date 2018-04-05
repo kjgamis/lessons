@@ -21,7 +21,7 @@ The ActiveRecord docs are notoriously hard to read, so we've compiled a list of 
 
 Does this list of methods seem partially familiar? That's because we purposefully asked you to follow this pattern of methods when writing your original Contact class.
 
-1.  Moving to ActiveRecord
+## 1.  Moving to ActiveRecord
 With our database now setup, we now need to modify our Contact class and get it working with a database.
 
 ### Transforming the Contact class into an ActiveRecord Model
