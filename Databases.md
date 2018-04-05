@@ -109,3 +109,89 @@ end
 ```
 
 This will ensure that as long as your program shuts down gracefully, it'll close the connection to the database.
+
+
+### Starting SQL on the command line
+Whenever you'd like to practice some SQL, feel free to open up the console and work with SQLite on the command line, just like in Step 0.
+
+```
+$ sqlite3
+```
+
+You can also start sqlite on the command line with a specific database in mind, such as the one we just created. Inside your project folder you can do:
+
+```
+$ sqlite3 crm.sqlite3
+```
+
+Note that if make any changes to data, you will be making actual changes to your database.
+
+Here are the official sql command line docs: https://www.sqlite.org/sqlite.html
+
+### CREATE a new table
+Create a new table called ```users```. It should have the columns ```id```, ```first_name```, and ```last_name```.
+
+```
+CREATE TABLE _table_ (
+  id INT PRIMARY KEY AUTOINCREMENT,
+  _column1_ _datatype1_,
+  _column2_ _datatype2_
+);
+```
+
+Fill in the blanks where there are underscores. Don't forget your semi-colons! Your query won't execute without them.
+
+### INSERT a new record
+Insert a few records inside your ```users``` table.
+
+```
+INSERT INTO _table_ (_column1_, _column2_) VALUES (_valueforcolumn1_, _valueforcolumn2_);
+```
+
+### SELECT records
+To select every record and every column:
+
+```
+SELECT * FROM _table_;
+```
+
+You can also select only specific column names by passing them in instead of *
+
+```
+SELECT _column_ FROM _table_;
+```
+
+### SELECT records conditionally
+You can use a **WHERE** clause to specify certain conditions in your query.
+
+```
+SELECT * FROM _table_ WHERE _column_ = _value_;
+```
+Depending on the "value", you might have to wrap it in quotes.
+
+Here are some examples of where clauses that you can use:
+
+### UPDATE a record
+Updating allows you to change values of existing rows inside your table.
+
+```
+UPDATE _table_ SET _column_ = _value_ WHERE _some_condition_;
+```
+
+It's probably best to always include a condition when you're updating rows, because otherwise the update will apply to every single row.
+
+### DELETE a record
+You can delete records from a table with the following statement.
+
+```
+DELETE FROM _table_ WHERE _some_condition_;
+```
+
+**NOTE:** If you don't set a condition in the DELETE statement, you will delete everything also.
+
+### DROP an entire table
+If you want to completely remove a database table, you'll need to "drop" it.
+
+```
+DROP TABLE _table_;
+```
