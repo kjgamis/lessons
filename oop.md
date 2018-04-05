@@ -95,4 +95,58 @@ attr_writer :name
 
 attr_accessor :name
 ```
+### Multi-class Programs
 
+- ```require```
+Each class should be defined in a separate file. In order to use class One inside class Two, the file containing class Two must load (or require) the file containing class One. Otherwise Ruby will have no idea what you're referring to when you try to make use of class One
+
+- ```require_relative```
+Classes work together to make the entire program functional. We let classes use other classes by importing a file. The way this is done is using a method called ```require_relative```, and basically what it does is get that file and stick it right in that line where the ```require_relative``` method was called.
+
+### Class Variables
+
+A class variable is a variable that's declared at the class level and shared across all objects of the same type
+
+
+### Class methods
+So far, all of the methods we've created were **instance methods**. Instance methods can only be used by a specific instance of an object, not the class itself (hence the name!). Put another way, and instance method is an action that an instance knows how to perform.
+
+Class methods are performed by the class itself and are usually reserved for actions that operate on the whole set of objects of that type. Instantiating a new contact and storing it in the list of all contacts affects the collection of all contacts so it's a good use case for a class method. It wouldn't make senese to give that responsibility to any single contact object. You can call a class method on the name of the class itself, eg. ```Contact.super_fun_class_method```.
+
+You define a class method by prefixing the name of the method with ```self```.
+
+What purpose do class methods serve and why would we want to use them? This is a great example of where object oriented design comes into play. Instance methods should involve logic that only make sense being applied to an instance of something, such as updating the email of a specific person. A class method involves logic that should be applied on the whole scale of the model, such as cleaning up the email addresses of all the contacts. So the first example would be ```some_contact.update_email(email)``` and the second ```Contact.clean_email_addresses```.
+
+Go ahead and implement the ```create ```method as follows:
+
+```
+# remember, we preface the method name with 'self.' if it is a class method
+def self.create(first_name, last_name, email, note)
+  new_contact = Contact.new(first_name, last_name, email, note)
+  @@contacts << new_contact
+  return new_contact
+end
+```
+
+Our initialize method should be responsible for setting the first name, last name, email, and note that get passed in from the ```create``` method. Additionally, it should set the id of the contact and increment the class ```@@id``` variable so that the next contact will get a different id.
+
+```
+def initialize(first_name, last_name, email, note)
+  .
+  .
+  .
+  @id = @@id
+  @@id += 1 # this way the next contact will get a different id
+end
+```
+
+### Other Methods
+The implementation of the following methods are left up to you:
+
+- ```self.all```
+- ```self.find```
+- ```self.find_by```
+- ```self.delete_all```
+- ```full_name```
+- ```update```
+- ```delete```
