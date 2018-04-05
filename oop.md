@@ -5,7 +5,7 @@ Take the example of any vehicle. It comprises wheels, horsepower, and gas tank c
 
 A vehicle can also have certain functions, such as halting, driving, and speeding. Even these functions form the data members of the class Vehicle. You can, therefore, define a class as a combination of characteristics and functions.
 
-## Defining Classes
+### Defining Classes
 To implement object-oriented programming by using Ruby, you need to first learn how to create objects and classes in Ruby.
 
 A class in Ruby always starts with the keyword class followed by the name of the class. The name should always be in initial capitals. The class Person can be displayed as:
@@ -24,7 +24,7 @@ jim = Person.new
 shelly = Person.new
 ```
 
-## Instance Methods
+### Instance Methods
 Instance methods only work on an instance and thus you have to create a new instance to use them (Person.new). Again, there are more ways to define instance methods than this, especially if you look into meta programming. The below is an example of an instance method.
 
 ```
