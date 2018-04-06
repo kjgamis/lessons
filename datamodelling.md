@@ -1,4 +1,4 @@
-# 1 to Many
+## 1 to Many
 
 **Relationships:**
 
@@ -20,4 +20,10 @@ Each author is associated with multiple articles. Each article is associated wit
 This allows each article to keep track of who its author is.
 
 
-# Many to many
+## Many to many
+
+### Placing join tables
+A join table is a table with two foreign key columns. It "joins" together the tables/models that those two foreign keys refer to.
+
+A join table can represent a class itself (as with the ```bookmarks``` join table), in which case it will have columns other than foreign keys. Alternatively, a join table can consist of only foreign keys therefore correspond to no class outside of the database (as was the case for the join table between ```users``` and ```articles``` in the first solution).
+
