@@ -2,18 +2,16 @@
 - How information gets passed around on the web
 - Client-server concept
 
+```
 Request:                                                  Response:
 
-<center>
-  
 | CRUD          | TYPE             | HEADER | BODY |       | Status Code | HEADER | BODY       |
 | ------------- |:----------------:| ------:| ----:|       | ----------- | ------:| ----------:|  
 | Read Data     | Get + URL        |   Y    |   N  |       |      Y      |    Y   |      Y     |
 | Create Data   | Post + URL       |   Y    |   Y  |       |      Y      |    Y   | sometimees |
 | Update Data   | Patch(Put) + URL |   Y    |   Y  |       |      Y      |    Y   | sometimees |
 | Delete Data   | Delete + URL     |   Y    |   N  |       |      Y      |    Y   | sometimees |
-
-</center>
+```
 
 ### Parts of a request
 - URL
@@ -56,6 +54,7 @@ Response code categories:
 
 ## Sinatra
 Sinatra is a mini web-framework for Ruby we'll be using to learn the different parts of web development before we dive into Rails.
+- "A DSL for quickly creating web applications in Ruby with minimal effort"
 
 ### Installing sinatra
 You can speed up installation of gems on your computer by skipping the local installation of documentation for each gem:
