@@ -4,6 +4,8 @@
 
 Request:                                                  Response:
 
+<centre>
+  
 | CRUD          | TYPE             | HEADER | BODY |       | Status Code | HEADER | BODY       |
 | ------------- |:----------------:| ------:| ----:|       | ----------- | ------:| ----------:|  
 | Read Data     | Get + URL        |   Y    |   N  |       |      Y      |    Y   |      Y     |
@@ -11,7 +13,7 @@ Request:                                                  Response:
 | Update Data   | Patch(Put) + URL |   Y    |   Y  |       |      Y      |    Y   | sometimees |
 | Delete Data   | Delete + URL     |   Y    |   N  |       |      Y      |    Y   | sometimees |
 
-
+</center>
 
 ### Parts of a request
 - URL
