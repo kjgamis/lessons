@@ -4,7 +4,7 @@
 
 Request:                                                  Response:
 
-<centre>
+<center>
   
 | CRUD          | TYPE             | HEADER | BODY |       | Status Code | HEADER | BODY       |
 | ------------- |:----------------:| ------:| ----:|       | ----------- | ------:| ----------:|  
