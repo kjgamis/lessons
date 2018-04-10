@@ -20,12 +20,15 @@
 ```<label for=" ">...</label>```
 
 - ```for``` attribute must match with ```id``` attribute of corresponding field
+- this is what the reader will see in the UI. It describes the data that will be in the input
+- you can wrap the label around the corresponding field to make the use experience better
 
 
 ```<textarea name=" " id=" "></textarea>```
 
 - ```name``` and ```id``` attributes
 - whitespace sensitive
+- the ```name``` corresponds to the attr_reader of the server
 
 ```
 <select name=" " id=" ">
