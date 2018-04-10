@@ -13,7 +13,8 @@
 ```<input type=" " name=" " value=" " id=" "/>```
 
 - ```type```, ```name```, ```value```, ```id``` attributes
-- ```id``` must match with ```for``` attribute of corresponding label tag
+- the ```name``` corresponds to the attr_accessor of the server
+- ```id``` must match with ```for``` attribute of corresponding ```label``` tag
 - types include ```text```, ```radio```, ```checkbox```, ```hidden```, ```file```, ```submit```, ```color```, ```email```, ```url```, ```range```, ```tel```
 
 
@@ -28,7 +29,7 @@
 
 - ```name``` and ```id``` attributes
 - whitespace sensitive
-- the ```name``` corresponds to the attr_reader of the server
+- the ```name``` corresponds to the attr_accessor of the server
 
 ```
 <select name=" " id=" ">
@@ -38,7 +39,10 @@
 ```
 
 - ```name```, ```id``` attributes on ```<select>```
+- the ```name``` corresponds to the attr_accessor of the server
 - ```value``` attribute on ```<option>```
+- value is linked to the database in server (value of attr_accessor)
+
 
 ```
 <fieldset>
