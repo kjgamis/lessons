@@ -46,6 +46,7 @@
 <!-- fields go here-->
 </fieldset>
 ```
+- ```<legend>``` to have better semantics of the HTML (ie. for screen readers)
 
 ### The ```params``` Hash
 - Sinatra's gift to you
