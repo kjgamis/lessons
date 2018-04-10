@@ -12,16 +12,19 @@
 
 ```<input type=" " name=" " value=" " id=" "/>```
 
-- type, name, value, id attributes
-- id must match with for attribute of corresponding label tag
-- types include text, radio, checkbox, hidden, file, submit
+- ```type```, ```name```, ```value```, ```id``` attributes
+- ```id``` must match with ```for``` attribute of corresponding label tag
+- types include ```text```, ```radio```, ```checkbox```, ```hidden```, ```file```, ```submit```, ```color```, ```email```, ```url```, ```range```, ```tel```
+
 
 ```<label for=" ">...</label>```
 
-- ```for``` attribute must match with id attribute of corresponding field
-<textarea name=" " id=" "></textarea>
+- ```for``` attribute must match with ```id``` attribute of corresponding field
 
-- name and id attributes
+
+```<textarea name=" " id=" "></textarea>```
+
+- ```name``` and ```id``` attributes
 - whitespace sensitive
 
 ```
