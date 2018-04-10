@@ -10,15 +10,13 @@
 
 ### Form Fields
 
-```<input type=" " name=" " value=" " id=" "/>
-```
+```<input type=" " name=" " value=" " id=" "/>```
 
 - type, name, value, id attributes
 - id must match with for attribute of corresponding label tag
 - types include text, radio, checkbox, hidden, file, submit
 
-```<label for=" ">...</label>
-```
+```<label for=" ">...</label>```
 
 - ```for``` attribute must match with id attribute of corresponding field
 <textarea name=" " id=" "></textarea>
