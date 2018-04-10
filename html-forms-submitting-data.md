@@ -1,4 +1,4 @@
-### The ```form``` tag
+## The ```form``` tag
 - submitting a form generates an HTTP request
 - remember to include ```action``` and ```method``` attributes to configure the request that gets sent
 
@@ -8,9 +8,9 @@
 </form>
 ```
 
-### Form Fields
+## Form Fields
 
-```<input type=" " name=" " value=" " id=" "/>```
+### ```<input type=" " name=" " value=" " id=" "/>```
 
 - ```type```, ```name```, ```value```, ```id``` attributes
 - the ```name``` corresponds to the attr_accessor of the server
@@ -18,19 +18,20 @@
 - types include ```text```, ```radio```, ```checkbox```, ```hidden```, ```file```, ```submit```, ```color```, ```email```, ```url```, ```range```, ```tel```
 
 
-```<label for=" ">...</label>```
+### ```<label for=" ">...</label>```
 
 - ```for``` attribute must match with ```id``` attribute of corresponding field
 - this is what the reader will see in the UI. It describes the data that will be in the input
 - you can wrap the label around the corresponding field to make the use experience better
 
 
-```<textarea name=" " id=" "></textarea>```
+### ```<textarea name=" " id=" "></textarea>```
 
 - ```name``` and ```id``` attributes
 - whitespace sensitive
 - the ```name``` corresponds to the attr_accessor of the server
 
+### ```<select>```
 ```
 <select name=" " id=" ">
 <option value=" ">text that the user sees</option>
@@ -43,7 +44,7 @@
 - ```value``` attribute on ```<option>```
 - value is linked to the database in server (value of attr_accessor)
 
-
+### ```<fieldset>```
 ```
 <fieldset>
 <legend>description of what data this fieldset is for</legend>
@@ -52,7 +53,8 @@
 ```
 - ```<legend>``` to have better semantics of the HTML (ie. for screen readers)
 
-### The ```params``` Hash
+
+## The ```params``` Hash
 - Sinatra's gift to you
 - contains all data from submitted form
   - the keys come from the name attributes of your fields
@@ -62,7 +64,7 @@
 {title: "This is the title the user entered", description: "this is the description the user typed in"}
 ```
 
-### PUT, PATCH, DELETE Requests
+## PUT, PATCH, DELETE Requests
 - annoyingly complicated!
 Here's the workaround for Sinatra:
 
@@ -76,7 +78,7 @@ Here's the workaround for Sinatra:
 <input type="hidden" name="_method" value="delete" />
 ```
 
-### Redirect vs Render
+## Redirect vs Render
 General guideline:
 
 - render a response at the end of GET request blocks
