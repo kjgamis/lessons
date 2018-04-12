@@ -19,24 +19,23 @@ end
 
 This routes matches the request like so:
 
-- get - matches the http request method.
+- ```get``` - matches the http request method.
 
-- /products/ - matches /products/ in http://store.com/products/55
+- ```/products/``` - matches /products/ in http://store.com/products/55
 
-- :id - as it starts with a colon :, it's a wildcard match and will match anything. Therefore it matches 55 in http://store.com/products/55
+- ```:id``` - as it starts with a colon ```:```, it's a wildcard match and will match anything. Therefore it matches 55 in http://store.com/products/55
 
 It then sends that request to:
 
-- products - the ProductsController
+- ```products``` - the ProductsController
 
-- show - the show action (ruby method) in the ProductsController
+- ```show``` - the show action (ruby method) in the ProductsController
 
 Inside of the Products Controller:
 
-
+```
 # app/controllers/products_controller.rb
 
-```
 class ProductsController < ApplicationController
 
   def show
