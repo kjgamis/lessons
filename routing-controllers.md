@@ -21,15 +21,15 @@ This routes matches the request like so:
 
 - ```get``` - matches the http request method.
 
-- ```/products/``` - matches /products/ in http://store.com/products/55
+- ```/products/``` - matches **/products/** in http://store.com/products/55
 
 - ```:id``` - as it starts with a colon ```:```, it's a wildcard match and will match anything. Therefore it matches 55 in http://store.com/products/55
 
 It then sends that request to:
 
-- ```products``` - the ProductsController
+- ```products``` - **the Products**Controller
 
-- ```show``` - the show action (ruby method) in the ProductsController
+- ```show``` - the **show** action (ruby method) in the ProductsController
 
 Inside of the Products Controller:
 
@@ -48,7 +48,7 @@ end
 The show method finds the product and then renders and returns the view.
 
 ## Routing - Static Segments
-Anything static (not prefixed with a colon) must be matched exactly for its route to take effect.
+Anything static (not prefixed with a **colon**) must be matched exactly for its route to take effect.
 
 In the following example:
 
@@ -59,7 +59,7 @@ get '/products' => 'products#index'
 ```products``` is a static segment.
 
 ## Routing - Dynamic Segments
-Anything dynamic (prefixed with a colon) can match on anything.
+Anything dynamic (prefixed with a **colon**) can match on anything.
 
 In the following example:
 
@@ -181,7 +181,6 @@ You'll hear developers say things like "Oh ya, it's just a basic **CRUD** app." 
 ## Seven Controller Methods - Overview
 A standard controller will have the following methods:
 ```
-
              HTTP
 Controller  Request
   Method    Method    Description
@@ -196,7 +195,7 @@ destroy     delete    remove a single record
 ```
 
 ## Views
-For ```get``` requests, the controller will implicitly try to render (process and send back as html) a template in a folder named after the controller, and a file named after the method.
+For ```get``` requests, the **controller** will implicitly try to render (process and send back as html) a template in a folder named after the controller, and a file named after the method.
 
 For example, a ```ProductsController``` will try to render the following:
 
@@ -227,7 +226,7 @@ Information about the http request will be accessible via the Params Hash.
 
 It will contain:
 
-- form data from a post or patch request
+- form data from a ```post``` or ```patch``` request
 
 - dynamic segment route matches in url. For example:
 
